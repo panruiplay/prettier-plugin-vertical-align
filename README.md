@@ -1,4 +1,4 @@
-# prettier-plugin-vertical-align
+# prettier-plugin-verticalize
 
 这是一个 Prettier v3+ 插件，用于对代码中的变量声明、枚举属性、赋值表达式等进行**垂直对齐**。
 
@@ -19,7 +19,7 @@
 ## 安装
 
 ```bash
-npm install -D prettier prettier-plugin-vertical-align
+npm install -D prettier prettier-plugin-verticalize
 ```
 
 需要 Prettier 3.x。
@@ -32,7 +32,7 @@ ESM 写法：
 
 ```js
 // prettier.config.js
-import prettierPluginVerticalAlign from 'prettier-plugin-vertical-align'
+import prettierPluginVerticalize from 'prettier-plugin-verticalize'
 import * as prettierPluginBabel from 'prettier/plugins/babel'
 import * as prettierPluginEstree from 'prettier/plugins/estree'
 import * as prettierPluginTypescript from 'prettier/plugins/typescript'
@@ -42,7 +42,7 @@ export default {
     prettierPluginEstree,
     prettierPluginTypescript,
     prettierPluginBabel,
-    prettierPluginVerticalAlign,
+    prettierPluginVerticalize,
   ],
 }
 ```
@@ -56,7 +56,7 @@ module.exports = {
     require('prettier/plugins/estree'),
     require('prettier/plugins/typescript'),
     require('prettier/plugins/babel'),
-    require('prettier-plugin-vertical-align'),
+    require('prettier-plugin-verticalize'),
   ],
 }
 ```
@@ -69,7 +69,7 @@ module.exports = {
     "prettier/plugins/estree",
     "prettier/plugins/typescript",
     "prettier/plugins/babel",
-    "prettier-plugin-vertical-align"
+    "prettier-plugin-verticalize"
   ]
 }
 ```
@@ -94,27 +94,29 @@ module.exports = {
 | `alignAssignmentMaxWidthDiff`          | `number`  | -      | 单独设置赋值语句 maxWidthDiff |
 
 ### minGroupSize
+
 ```javascript
 // 当 `minGroupSize` 设置为 3 时，少于 3 行，不对齐
 const name = 'rio'
 const age = 18
 
 // 当 `minGroupSize` 设置为 3 时，大于等于 3 行，对齐
-const foo       = 1
-const barz      = 2
+const foo = 1
+const barz = 2
 const component = 3
 ```
 
 ### maxWidthDiff
+
 ```javascript
 // 当 `maxWidthDiff` 设置为 20 时
-const name        = 1      // name
-const array       = [1, 2] // list
+const name = 1      // name
+const array = [1, 2] // list
 const array123456 = 3      // name
 const array654321 = [3, 4] // list
 
 // 当 `maxWidthDiff` 设置为 5 时
-const name  = 1      // name
+const name = 1      // name
 const array = [1, 2] // list
 const array123456 = 3      // name
 const array654321 = [3, 4] // list
