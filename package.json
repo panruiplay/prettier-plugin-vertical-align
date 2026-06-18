@@ -1,6 +1,6 @@
 {
   "name": "prettier-plugin-vertical-align",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a Prettier plugin for vertically aligning your code.",
   "type": "module",
   "main": "./dist/index.cjs",
@@ -14,8 +14,13 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "doc"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tailwindlabs/prettier-plugin-tailwindcss"
+  },
   "scripts": {
     "build": "npm run lint && tsup",
     "test": "vitest run",
